@@ -1,1 +1,115 @@
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#090d16;color:#eef3ff;font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.6}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 7%;border-bottom:1px solid #182033;background:rgba(9,13,22,.9);position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}.brand{font-weight:800;letter-spacing:.2px}.brand-mark{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;background:#2563eb;margin-right:9px}.muted{color:#7f8ba3}.nav-link{color:#b9c7e5;text-decoration:none}.hero{padding:105px 7% 95px;max-width:1100px}.badge,.eyebrow{color:#60a5fa;font-size:12px;font-weight:800;letter-spacing:2px}.hero h1{font-size:clamp(48px,8vw,88px);line-height:.98;margin:18px 0}.hero h1 span{color:#60a5fa}.lead{font-size:20px;color:#aab6cc;max-width:700px}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}.btn,.small-btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:10px;font-weight:750}.btn{padding:13px 20px}.primary{background:#2563eb;color:white}.primary:hover{background:#1d4ed8}.secondary{border:1px solid #2a3650;color:#dbe6ff}.mini{margin-top:18px;color:#66738d;font-size:13px}.section,.install,.download-section{padding:90px 7%;max-width:1250px;margin:auto}.section-head h2,.install h2,.download-section h2{font-size:38px;margin:8px 0 28px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.grid article{padding:25px;border:1px solid #1b263b;background:#0e1421;border-radius:16px}.icon{font-size:25px}.grid h3{margin:12px 0 5px}.grid p,.download-section p,.install li,.note{color:#8997b0}.download-section{max-width:none;background:#0e1421;border-top:1px solid #1b263b;border-bottom:1px solid #1b263b;display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.download-card{border:1px solid #25324b;border-radius:16px;overflow:hidden;background:#0a101b}.file-row{padding:20px;display:flex;justify-content:space-between;align-items:center;gap:20px;border-bottom:1px solid #1b263b}.file-row:last-child{border-bottom:0}.file-row small{display:block;color:#6f7d95;margin-top:3px}.small-btn{padding:9px 13px;background:#2563eb;color:white;white-space:nowrap}.install{max-width:1000px}.install code{background:#121a2a;padding:3px 7px;border-radius:6px;color:#9fc0ff}.install li{margin:8px 0}.note{border-left:3px solid #2563eb;padding-left:14px;margin-top:25px}footer{padding:35px 7%;border-top:1px solid #182033;display:flex;justify-content:space-between;gap:20px;color:#a9b5cb;font-size:14px}@media(max-width:800px){.grid{grid-template-columns:1fr}.download-section{grid-template-columns:1fr}.hero{padding-top:75px}.nav{padding:0 5%}footer{flex-direction:column}.section,.install,.download-section{padding-left:5%;padding-right:5%}}
+.versions {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.versions h2 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    opacity: 0.7;
+    margin-bottom: 40px;
+}
+
+.version-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.version-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 24px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+
+    background: rgba(255,255,255,0.04);
+
+    transition: transform 0.2s ease,
+                border-color 0.2s ease,
+                background 0.2s ease;
+}
+
+.version-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.07);
+}
+
+.version-card.latest {
+    grid-column: 1 / -1;
+    border: 1px solid rgba(0,255,100,0.4);
+}
+
+.version-info h3 {
+    margin: 6px 0;
+    font-size: 22px;
+}
+
+.version-info p {
+    margin: 0;
+    opacity: 0.65;
+}
+
+.latest-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    background: rgba(0,255,100,0.15);
+}
+
+.download-btn {
+    display: inline-block;
+
+    padding: 11px 18px;
+    border-radius: 10px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    background: #22c55e;
+    color: white;
+
+    transition: transform 0.2s ease,
+                opacity 0.2s ease;
+}
+
+.download-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+@media (max-width: 700px) {
+    .version-list {
+        grid-template-columns: 1fr;
+    }
+
+    .version-card.latest {
+        grid-column: auto;
+    }
+
+    .version-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .download-btn {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
