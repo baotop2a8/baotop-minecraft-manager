@@ -1,25 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* =========================
-       SMOOTH SCROLL
-    ========================= */
-
-    const internalLinks =
-        document.querySelectorAll('a[href^="#"]');
+    /* Smooth scrolling */
+    const internalLinks = document.querySelectorAll('a[href^="#"]');
 
     internalLinks.forEach(function (link) {
-
         link.addEventListener("click", function (event) {
 
-            const targetId =
-                this.getAttribute("href");
+            const targetId = this.getAttribute("href");
 
             if (!targetId || targetId === "#") {
                 return;
             }
 
-            const target =
-                document.querySelector(targetId);
+            const target = document.querySelector(targetId);
 
             if (!target) {
                 return;
@@ -31,42 +24,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 behavior: "smooth",
                 block: "start"
             });
-
         });
-
     });
 
 
-    /* =========================
-       DOWNLOAD BUTTON EFFECT
-    ========================= */
-
-    const downloadButtons =
-        document.querySelectorAll(
-            'a[href$=".py"]'
-        );
+    /* Download button animation */
+    const downloadButtons = document.querySelectorAll('a[download]');
 
     downloadButtons.forEach(function (button) {
 
         button.addEventListener("click", function () {
 
-            const originalText =
-                button.textContent;
+            const originalText = button.textContent;
 
             button.classList.add("downloading");
-
-            button.textContent =
-                "Downloading...";
+            button.textContent = "Downloading...";
 
             setTimeout(function () {
-
-                button.textContent =
-                    originalText;
-
-                button.classList.remove(
-                    "downloading"
-                );
-
+                button.textContent = originalText;
+                button.classList.remove("downloading");
             }, 1200);
 
         });
@@ -74,57 +50,37 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    /* =========================
-       CURRENT YEAR
-    ========================= */
-
-    const yearElement =
-        document.getElementById("year");
+    /* Current year */
+    const yearElement = document.getElementById("year");
 
     if (yearElement) {
-
-        yearElement.textContent =
-            new Date().getFullYear();
-
+        yearElement.textContent = new Date().getFullYear();
     }
 
 
-    /* =========================
-       SCROLL HEADER EFFECT
-    ========================= */
-
-    const header =
-        document.querySelector(".header");
+    /* Header scroll effect */
+    const header = document.querySelector(".header");
 
     window.addEventListener("scroll", function () {
 
+        if (!header) {
+            return;
+        }
+
         if (window.scrollY > 30) {
-
             header.classList.add("scrolled");
-
         } else {
-
             header.classList.remove("scrolled");
-
         }
 
     });
 
 
-    /* =========================
-       VERSION CARD ANIMATION
-    ========================= */
-
-    const cards =
-        document.querySelectorAll(
-            ".version-card"
-        );
+    /* Version card animation delay */
+    const cards = document.querySelectorAll(".version-card");
 
     cards.forEach(function (card, index) {
-
-        card.style.animationDelay =
-            (index * 0.04) + "s";
-
+        card.style.animationDelay = (index * 0.04) + "s";
     });
 
 });
