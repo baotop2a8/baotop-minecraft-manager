@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Minecraft Server Manager</title>
-    <meta name="description" content="Minecraft Server Manager - Manage your Minecraft servers easily.">
+
+    <meta
+        name="description"
+        content="Minecraft Server Manager - Manage your Minecraft servers easily."
+    >
 
     <link rel="icon" href="icon.ico">
     <link rel="stylesheet" href="style.css">
@@ -13,345 +17,532 @@
 
 <body>
 
-<header class="header">
-    <div class="container nav">
-        <a href="#home" class="logo">
-            ⛏️ Minecraft Server Manager
-        </a>
+    <!-- =========================
+         HEADER
+    ========================== -->
 
-        <nav>
-            <a href="#features">Features</a>
-            <a href="#versions">Versions</a>
-            <a href="#download">Download</a>
-        </nav>
-    </div>
-</header>
+    <header class="header">
 
+        <div class="container nav">
 
-<main>
+            <a href="#home" class="logo">
+                ⛏️ Minecraft Server Manager
+            </a>
 
-    <!-- HERO -->
-    <section id="home" class="hero">
-        <div class="container hero-grid">
-
-            <div class="hero-text">
-                <div class="badge">🚀 V6 Beta 4 — Latest Version</div>
-
-                <h1>
-                    Minecraft Server
-                    <span>Manager</span>
-                </h1>
-
-                <p>
-                    A simple and powerful Python GUI for managing
-                    Minecraft servers on Windows.
-                </p>
-
-                <div class="hero-buttons">
-                    <a
-                        href="MinecraftServerManager_v6(beta4).py"
-                        class="btn primary"
-                        download
-                    >
-                        ⬇ Download Latest
-                    </a>
-
-                    <a href="#versions" class="btn secondary">
-                        View Versions
-                    </a>
-                </div>
-
-                <div class="hero-info">
-                    <span>🐍 Python</span>
-                    <span>🪟 Windows</span>
-                    <span>🎮 Minecraft</span>
-                    <span>⚡ Lightweight</span>
-                </div>
-            </div>
-
-
-            <div class="terminal">
-                <div class="terminal-top">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-
-                <div class="terminal-body">
-                    <p><span class="green">$</span> python MinecraftServerManager_v6(beta4).py</p>
-                    <p class="muted">Starting Minecraft Server Manager...</p>
-                    <p class="success">✓ Manager started successfully</p>
-                    <p class="muted">Ready to manage your server.</p>
-                    <p><span class="green">$</span> _</p>
-                </div>
-            </div>
+            <nav>
+                <a href="#features">Features</a>
+                <a href="#versions">Versions</a>
+                <a href="#download">Download</a>
+            </nav>
 
         </div>
-    </section>
+
+    </header>
 
 
-    <!-- FEATURES -->
-    <section id="features" class="section">
-        <div class="container">
+    <!-- =========================
+         MAIN
+    ========================== -->
 
-            <div class="section-title">
-                <span>FEATURES</span>
-                <h2>Everything you need</h2>
-                <p>
-                    Manage your Minecraft servers from one simple application.
-                </p>
+    <main>
+
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section id="home" class="hero">
+
+            <div class="container hero-grid">
+
+
+                <div class="hero-text">
+
+                    <div class="badge">
+                        🚀 Automatically updated from GitHub
+                    </div>
+
+
+                    <h1>
+                        Minecraft Server
+                        <span>Manager</span>
+                    </h1>
+
+
+                    <p>
+                        A simple and powerful Python GUI for managing
+                        Minecraft servers on Windows.
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <a
+                            id="hero-download"
+                            href="#download"
+                            class="btn primary"
+                        >
+                            ⬇ Download Latest
+                        </a>
+
+
+                        <a
+                            href="#versions"
+                            class="btn secondary"
+                        >
+                            View Versions
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-info">
+
+                        <span>🐍 Python</span>
+                        <span>🪟 Windows</span>
+                        <span>🎮 Minecraft</span>
+                        <span>⚡ Lightweight</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TERMINAL -->
+
+                <div class="terminal">
+
+                    <div class="terminal-top">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+
+                    <div class="terminal-body">
+
+                        <p>
+                            <span class="green">$</span>
+                            python MinecraftServerManager.py
+                        </p>
+
+                        <p class="muted">
+                            Starting Minecraft Server Manager...
+                        </p>
+
+                        <p class="success">
+                            ✓ Manager started successfully
+                        </p>
+
+                        <p class="muted">
+                            Loading versions from GitHub...
+                        </p>
+
+                        <p class="success">
+                            ✓ Ready to manage your server.
+                        </p>
+
+                        <p>
+                            <span class="green">$</span> _
+                        </p>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="features-grid">
-
-                <div class="feature-card">
-                    <div class="feature-icon">🖥️</div>
-                    <h3>Server Management</h3>
-                    <p>
-                        Easily start, stop and manage your Minecraft servers.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📜</div>
-                    <h3>Console</h3>
-                    <p>
-                        View server output and interact with the Minecraft console.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">⚙️</div>
-                    <h3>Easy Configuration</h3>
-                    <p>
-                        Configure your server settings through a friendly GUI.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🌐</div>
-                    <h3>Geyser Support</h3>
-                    <p>
-                        Support for Geyser and Floodgate for cross-platform play.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🔌</div>
-                    <h3>Plugins</h3>
-                    <p>
-                        Easily work with popular Minecraft server plugins.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3>Modern GUI</h3>
-                    <p>
-                        A clean and modern interface built with CustomTkinter.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
+        </section>
 
 
-    <!-- LATEST -->
-    <section class="latest-section">
-        <div class="container">
 
-            <div class="latest-box">
+        <!-- =========================
+             FEATURES
+        ========================== -->
 
-                <div>
-                    <span class="latest-label">LATEST RELEASE</span>
+        <section id="features" class="section">
+
+            <div class="container">
+
+
+                <div class="section-title">
+
+                    <span>FEATURES</span>
 
                     <h2>
-                        Minecraft Server Manager
-                        <strong>V6 Beta 4</strong>
+                        Everything you need
                     </h2>
 
                     <p>
-                        The latest available version of Minecraft Server Manager.
+                        Manage your Minecraft servers from one simple application.
                     </p>
-                </div>
 
-                <a
-                    href="MinecraftServerManager_v6(beta4).py"
-                    class="btn primary"
-                    download
-                >
-                    ⬇ Download V6 Beta 4
-                </a>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- VERSIONS -->
-    <section id="versions" class="section versions-section">
-        <div class="container">
-
-            <div class="section-title">
-                <span>DOWNLOADS</span>
-                <h2>All Versions</h2>
-                <p>
-                    Download any available version of Minecraft Server Manager.
-                </p>
-            </div>
-
-
-            <div class="versions-grid">
-
-                <!-- V6 -->
-                <div class="version-card latest-version">
-                    <div>
-                        <span class="version-tag">LATEST</span>
-                        <h3>V6 Beta 4</h3>
-                        <p>MinecraftServerManager_v6(beta4).py</p>
-                    </div>
-                    <a href="MinecraftServerManager_v6(beta4).py" download>Download</a>
-                </div>
-
-                <div class="version-card">
-                    <div>
-                        <h3>V6 Beta 3</h3>
-                        <p>MinecraftServerManager_v6(beta3).py</p>
-                    </div>
-                    <a href="MinecraftServerManager_v6(beta3).py" download>Download</a>
-                </div>
-
-                <div class="version-card">
-                    <div>
-                        <h3>V6 Beta 2</h3>
-                        <p>MinecraftServerManager_v6(beta2).py</p>
-                    </div>
-                    <a href="MinecraftServerManager_v6(beta2).py" download>Download</a>
-                </div>
-
-                <div class="version-card">
-                    <div>
-                        <h3>V6 Beta 1</h3>
-                        <p>MinecraftServerManager_v6(beta1).py</p>
-                    </div>
-                    <a href="MinecraftServerManager_v6(beta1).py" download>Download</a>
                 </div>
 
 
-                <!-- V5 -->
-                <div class="version-card">
-                    <div>
-                        <h3>V5</h3>
-                        <p>MinecraftServerManager_v5.py</p>
+
+                <div class="features-grid">
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            🖥️
+                        </div>
+
+                        <h3>
+                            Server Management
+                        </h3>
+
+                        <p>
+                            Easily start, stop and manage your Minecraft servers.
+                        </p>
+
                     </div>
-                    <a href="MinecraftServerManager_v5.py" download>Download</a>
-                </div>
 
 
-                <!-- V4 -->
-                <div class="version-card">
-                    <div>
-                        <h3>V4 Beta 3</h3>
-                        <p>MinecraftServerManager_v4(beta3).py</p>
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            📜
+                        </div>
+
+                        <h3>
+                            Console
+                        </h3>
+
+                        <p>
+                            View server output and interact with the Minecraft console.
+                        </p>
+
                     </div>
-                    <a href="MinecraftServerManager_v4(beta3).py" download>Download</a>
-                </div>
 
-                <div class="version-card">
-                    <div>
-                        <h3>V4 Beta 2</h3>
-                        <p>MinecraftServerManager_v4(beta2).py</p>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            ⚙️
+                        </div>
+
+                        <h3>
+                            Easy Configuration
+                        </h3>
+
+                        <p>
+                            Configure your server settings through a friendly GUI.
+                        </p>
+
                     </div>
-                    <a href="MinecraftServerManager_v4(beta2).py" download>Download</a>
-                </div>
 
-                <div class="version-card">
-                    <div>
-                        <h3>V4 Beta 1</h3>
-                        <p>MinecraftServerManager_v4(beta1).py</p>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            🌐
+                        </div>
+
+                        <h3>
+                            Geyser Support
+                        </h3>
+
+                        <p>
+                            Support for Geyser and Floodgate for cross-platform play.
+                        </p>
+
                     </div>
-                    <a href="MinecraftServerManager_v4(beta1).py" download>Download</a>
-                </div>
 
-                <div class="version-card">
-                    <div>
-                        <h3>V4</h3>
-                        <p>MinecraftServerManager_v4.py</p>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            🔌
+                        </div>
+
+                        <h3>
+                            Plugins
+                        </h3>
+
+                        <p>
+                            Easily work with popular Minecraft server plugins.
+                        </p>
+
                     </div>
-                    <a href="MinecraftServerManager_v4.py" download>Download</a>
-                </div>
 
 
-                <!-- V3 -->
-                <div class="version-card">
-                    <div>
-                        <h3>V3</h3>
-                        <p>MinecraftServerManager_v3.py</p>
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            🎨
+                        </div>
+
+                        <h3>
+                            Modern GUI
+                        </h3>
+
+                        <p>
+                            A clean and modern interface built with CustomTkinter.
+                        </p>
+
                     </div>
-                    <a href="MinecraftServerManager_v3.py" download>Download</a>
-                </div>
 
 
-                <!-- V2 -->
-                <div class="version-card">
-                    <div>
-                        <h3>V2</h3>
-                        <p>MinecraftServerManager_v2.py</p>
-                    </div>
-                    <a href="MinecraftServerManager_v2.py" download>Download</a>
                 </div>
 
             </div>
 
-        </div>
-    </section>
+        </section>
 
 
-    <!-- DOWNLOAD CTA -->
-    <section id="download" class="download-section">
-        <div class="container">
 
-            <div class="download-box">
-                <div>
-                    <span>READY TO START?</span>
-                    <h2>Download Minecraft Server Manager</h2>
+        <!-- =========================
+             RECOMMENDED
+        ========================== -->
+
+        <section class="latest-section">
+
+            <div class="container">
+
+                <div class="latest-box">
+
+
+                    <div>
+
+                        <span class="latest-label">
+                            RECOMMENDED RELEASE
+                        </span>
+
+
+                        <h2 id="recommended-title">
+                            Loading...
+                        </h2>
+
+
+                        <p id="recommended-description">
+                            Finding the newest stable release...
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        id="recommended-download"
+                        href="#"
+                        class="btn primary disabled"
+                    >
+                        Loading...
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             VERSIONS
+        ========================== -->
+
+        <section
+            id="versions"
+            class="section versions-section"
+        >
+
+            <div class="container">
+
+
+                <div class="section-title">
+
+                    <span>DOWNLOADS</span>
+
+                    <h2>
+                        All Versions
+                    </h2>
+
                     <p>
-                        Get the latest version and start managing your Minecraft server.
+                        Versions are automatically loaded from GitHub.
                     </p>
+
                 </div>
 
-                <a
-                    href="MinecraftServerManager_v6(beta4).py"
-                    class="btn primary large"
-                    download
-                >
-                    ⬇ Download V6 Beta 4
-                </a>
+
+
+                <!-- =====================
+                     BETA
+                ====================== -->
+
+                <div class="version-category">
+
+                    <div class="category-title">
+
+                        <span class="category-label beta-label">
+                            🧪 BETA
+                        </span>
+
+                        <h2>
+                            Beta Versions
+                        </h2>
+
+                        <p>
+                            Experimental versions with newer features.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        id="beta-versions"
+                        class="versions-grid"
+                    >
+
+                        <div class="loading">
+                            Loading beta versions...
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =====================
+                     RELEASE
+                ====================== -->
+
+                <div class="version-category">
+
+                    <div class="category-title">
+
+                        <span class="category-label release-label">
+                            📦 RELEASE
+                        </span>
+
+                        <h2>
+                            Stable Releases
+                        </h2>
+
+                        <p>
+                            Stable versions of Minecraft Server Manager.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        id="release-versions"
+                        class="versions-grid"
+                    >
+
+                        <div class="loading">
+                            Loading releases...
+                        </div>
+
+                    </div>
+
+                </div>
+
+
             </div>
 
+        </section>
+
+
+
+        <!-- =========================
+             DOWNLOAD
+        ========================== -->
+
+        <section
+            id="download"
+            class="download-section"
+        >
+
+            <div class="container">
+
+
+                <div class="download-box">
+
+                    <div>
+
+                        <span>
+                            DOWNLOAD
+                        </span>
+
+                        <h2>
+                            Minecraft Server Manager
+                        </h2>
+
+                        <p id="download-description">
+                            Loading latest release...
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        id="download-button"
+                        href="#"
+                        class="btn primary large disabled"
+                    >
+                        Loading...
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container footer-content">
+
+
+            <div>
+
+                <strong>
+                    ⛏️ Minecraft Server Manager
+                </strong>
+
+                <p>
+                    Simple Minecraft server management.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                ©
+                <span id="year"></span>
+                Minecraft Server Manager
+
+            </div>
+
+
         </div>
-    </section>
 
-</main>
-
-
-<footer>
-    <div class="container footer-content">
-        <div>
-            <strong>⛏️ Minecraft Server Manager</strong>
-            <p>Simple Minecraft server management.</p>
-        </div>
-
-        <div>
-            © <span id="year"></span> Minecraft Server Manager
-        </div>
-    </div>
-</footer>
+    </footer>
 
 
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
