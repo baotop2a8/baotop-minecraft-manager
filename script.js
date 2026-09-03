@@ -1,44 +1,72 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Smooth scrolling for internal links
-    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    /* =========================
+       SMOOTH SCROLL
+    ========================= */
+
+    const internalLinks =
+        document.querySelectorAll('a[href^="#"]');
+
+    internalLinks.forEach(function (link) {
 
         link.addEventListener("click", function (event) {
 
-            const targetId = this.getAttribute("href");
+            const targetId =
+                this.getAttribute("href");
 
-            if (targetId === "#") {
+            if (!targetId || targetId === "#") {
                 return;
             }
 
-            const target = document.querySelector(targetId);
+            const target =
+                document.querySelector(targetId);
 
-            if (target) {
-                event.preventDefault();
-
-                target.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
+            if (!target) {
+                return;
             }
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
         });
 
     });
 
 
-    // Add a small visual effect when downloading
-    document.querySelectorAll(
-        'a[href$=".py"]'
-    ).forEach(function (button) {
+    /* =========================
+       DOWNLOAD BUTTON EFFECT
+    ========================= */
+
+    const downloadButtons =
+        document.querySelectorAll(
+            'a[href$=".py"]'
+        );
+
+    downloadButtons.forEach(function (button) {
 
         button.addEventListener("click", function () {
 
-            const originalText = this.textContent;
+            const originalText =
+                button.textContent;
 
-            this.textContent = "Downloading...";
+            button.classList.add("downloading");
+
+            button.textContent =
+                "Downloading...";
 
             setTimeout(function () {
-                button.textContent = originalText;
+
+                button.textContent =
+                    originalText;
+
+                button.classList.remove(
+                    "downloading"
+                );
+
             }, 1200);
 
         });
@@ -46,15 +74,56 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // Current year in footer
-    const year = new Date().getFullYear();
+    /* =========================
+       CURRENT YEAR
+    ========================= */
 
-    document.querySelectorAll("footer").forEach(function (footer) {
+    const yearElement =
+        document.getElementById("year");
 
-        footer.innerHTML = footer.innerHTML.replace(
-            "© 2026",
-            "© " + year
+    if (yearElement) {
+
+        yearElement.textContent =
+            new Date().getFullYear();
+
+    }
+
+
+    /* =========================
+       SCROLL HEADER EFFECT
+    ========================= */
+
+    const header =
+        document.querySelector(".header");
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 30) {
+
+            header.classList.add("scrolled");
+
+        } else {
+
+            header.classList.remove("scrolled");
+
+        }
+
+    });
+
+
+    /* =========================
+       VERSION CARD ANIMATION
+    ========================= */
+
+    const cards =
+        document.querySelectorAll(
+            ".version-card"
         );
+
+    cards.forEach(function (card, index) {
+
+        card.style.animationDelay =
+            (index * 0.04) + "s";
 
     });
 
