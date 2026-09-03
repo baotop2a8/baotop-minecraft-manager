@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const GITHUB_REPO = "baotop-minecraft-manager";
 
     const GITHUB_API =
-        `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/`;
+     `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/downloads`;
 
 
 
